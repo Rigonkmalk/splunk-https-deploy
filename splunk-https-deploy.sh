@@ -112,7 +112,7 @@ create_config_files
 echo -e "\n${BLUE}Starting Splunk container with Docker Compose...${NC}"
 echo -e "${YELLOW}First startup may take a few minutes.${NC}"
 
-(cd "$PROJECT_DIR" && docker compose up -d)
+(cd ${PROJECT_DIR} && docker compose up -d)
 
 echo -e "\n${GREEN}====================================================="
 echo -e "🎉 Splunk has been successfully deployed! 🎉"
@@ -122,6 +122,6 @@ echo -e "Username   : ${GREEN}admin${NC}"
 echo -e "Password   : ${GREEN}The one you just set.${NC}"
 echo -e "\n${YELLOW}NOTE: Your browser will show a security warning."
 echo -e "This is normal because the certificate is self-signed. Accept the risk to continue.${NC}"
-echo -e "\nTo view logs: ${BLUE}cd ${PROJECT_DIR} && docker-compose logs -f${NC}"
-echo -e "To stop Splunk: ${BLUE}cd ${PROJECT_DIR} && docker-compose down${NC}"
-echo -e "To stop and remove data: ${BLUE}cd ${PROJECT_DIR} && docker-compose down -v${NC}"
+echo -e "\nTo view logs: ${BLUE}cd ${PROJECT_DIR} && docker compose logs -f${NC}"
+echo -e "To stop Splunk: ${BLUE}cd ${PROJECT_DIR} && docker compose down${NC}"
+echo -e "To stop and remove data: ${BLUE}cd ${PROJECT_DIR} && docker compose down -v${NC}"
