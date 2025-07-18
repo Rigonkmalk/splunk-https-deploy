@@ -14,7 +14,6 @@ This repository provides a simple shell script to deploy a Splunk instance in a 
 - [Docker](https://www.docker.com/) installed
 - [Docker Compose](https://docs.docker.com/compose/) installed
 - [OpenSSL](https://www.openssl.org/) installed
-- Bash shell
 
 ## Usage
 
