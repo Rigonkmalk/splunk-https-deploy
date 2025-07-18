@@ -22,7 +22,7 @@ BLUE='\033[0;34m'
 NC='\033[0m'
 
 check_dependencies() {
-    for cmd in docker docker-compose openssl; do
+    for cmd in docker openssl; do
         if ! command -v $cmd &> /dev/null; then
             echo -e "${YELLOW}Error: '$cmd' is not installed. Please install it first.${NC}"
             exit 1
@@ -112,7 +112,7 @@ create_config_files
 echo -e "\n${BLUE}Starting Splunk container with Docker Compose...${NC}"
 echo -e "${YELLOW}First startup may take a few minutes.${NC}"
 
-(cd "$PROJECT_DIR" && docker-compose up -d)
+(cd "$PROJECT_DIR" && docker compose up -d)
 
 echo -e "\n${GREEN}====================================================="
 echo -e "🎉 Splunk has been successfully deployed! 🎉"
