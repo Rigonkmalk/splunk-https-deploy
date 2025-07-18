@@ -43,7 +43,7 @@ generate_certs() {
       -days 365 \
       -nodes \
       -subj "/C=FR/ST=Paris/L=Paris/O=Dev/CN=${SPLUNK_HOSTNAME}"
-    cat "${CERT_DIR}/splunk.key" "${CERT_DIR}/splunk.pem" > "${CERT_DIR}/splunk.pem"
+    cat "${CERT_DIR}/splunk.key" "${CERT_DIR}/splunk.pem" > "${CERT_DIR}/splunk_combined.pem"
 }
 
 create_config_files() {
